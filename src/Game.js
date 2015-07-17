@@ -13,8 +13,7 @@ var GameLayer = cc.Layer.extend({
 		this.menu=new GameMenu(this);
 		this.addChild(this.menu);
 	},
-	switchSinglePlaySelector:function(){
-		
+	switchSinglePlaySelector:function(){		
 		this.removeChild(this.menu);	
 		this.addChild(this.singlePlaySelectorLayer,1);
 		this.singlePlaySelectorLayer.initEvent();
@@ -29,6 +28,7 @@ var GameLayer = cc.Layer.extend({
 		this.removeChild(this.singlePlaySelectorLayer);
 		this.addChild(this.world);
 		this.world.init();
+
 	},
 
 	switchMenuFromSinglePlay:function(){
